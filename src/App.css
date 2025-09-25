@@ -8,6 +8,11 @@
   font-style: normal;
 }
 
-ul li a {
+ul li button {
   font-size: 16px;
+  padding: 8px 12px;
+}
+ul li button:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 8px;
 }

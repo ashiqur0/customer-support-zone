@@ -1,11 +1,13 @@
 import './App.css'
+import Banner from './Components/Headers/Banner'
 import Navbar from './Components/Headers/Navbar'
 
 function App() {
 
   return (
-    <div className='max-w-320 mx-auto font-inter'>
+    <div className='font-inter bg-gray-100'>
       <Navbar></Navbar>
+      <Banner></Banner>
       
     </div>
   )
