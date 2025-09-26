@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './Components/Footer/Footer'
 import Banner from './Components/Headers/Banner'
 import Navbar from './Components/Headers/Navbar'
 import CustomerTicketParent from './Components/Main/CustomerTicketParent'
@@ -10,6 +11,7 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <CustomerTicketParent></CustomerTicketParent>
+      <Footer></Footer>
     </div>
   )
 }
