@@ -3,7 +3,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
     return (
-        <div className='bg-white py-3'>
+        <div className='bg-white py-3 px-3'>
             <div className='flex justify-start  max-w-320 mx-auto '>
                 <details className="dropdown w-100vw block  md:hidden">
                     <summary className="btn m-1"><FontAwesomeIcon icon={faBars} /></summary>
@@ -23,8 +23,8 @@ const Navbar = () => {
                     </ul>
                 </details>
 
-                <div className='w-full flex justify-between items-center'>
-                    <h1 className='font-bold text-2xl'>CS — Ticket System</h1>
+                <div className='w-full flex justify-between items-center text-black'>
+                    <h1 className='font-bold md:text-2xl'>CS — Ticket System</h1>
                     <div>
                         <ul className='md:flex justify-around items-center hidden'>
                             <li><button>Home</button></li>
