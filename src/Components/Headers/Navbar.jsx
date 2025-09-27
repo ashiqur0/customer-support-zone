@@ -15,7 +15,7 @@ const Navbar = ({ isDarkMode }) => {
                         <li>Download</li>
                         <li>Contact</li>
                         <li>
-                            <button className='flex items-center gap-3 bg-gradient-to-br from-indigo-800 via-violet-700 to-fuchsia-600 px-4 py-2 rounded-md font-bold'>
+                            <button className='flex items-center gap-3 bg-gradient-to-br from-indigo-800 via-violet-700 to-fuchsia-600 px-4 py-2 rounded-md font-bold text-white'>
                                 <span>+</span>
                                 <span>New Ticket</span>
                             </button>
@@ -24,7 +24,7 @@ const Navbar = ({ isDarkMode }) => {
                 </details>
 
                 <div className='w-full flex justify-between items-center cursor-pointer'>
-                    <h1 className='font-bold md:text-2xl'>CS — Ticket System</h1>
+                    <h1 className='font-bold md:text-2xl hover:text-3xl'>CS — Ticket System</h1>
                     <div>
                         <ul className='md:flex justify-around items-center hidden'>
                             <li><button>Home</button></li>

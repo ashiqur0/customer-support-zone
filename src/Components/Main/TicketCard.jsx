@@ -6,7 +6,7 @@ const TicketCard = ({ customer, handleSetIssues, isDarkMode }) => {
 
     return (
         <div onClick={() => handleSetIssues(customer)}
-            className={`${isDarkMode ? 'bg-slate-900' : 'bg-slate-100'} p-4 rounded-md cursor-pointer`}>
+            className={`${isDarkMode ? 'bg-slate-950 shadow-white' : 'bg-slate-100 shadow-slate-800'} p-4 hover:shadow-md  rounded-md cursor-pointer`}>
             <div className='flex justify-between'>
                 <h2 className='font-semibold md:text-[1.125rem] text-[14px]'>{title}</h2>
                 <div className={`font-semibold md:py-1.5 md:px-4 px-2 py-1 rounded-xl md:rounded-3xl flex items-center gap-1.5 ${status === 'Open' ? 'bg-green-300' : 'bg-amber-200'}`}>
@@ -19,7 +19,7 @@ const TicketCard = ({ customer, handleSetIssues, isDarkMode }) => {
                         `}>{status}</p>
                 </div>
             </div>
-            <p className='mt-2 mb-4 text-gray-400 text-xs md:text-[14px]'>{description}</p>
+            <p className={`${isDarkMode? 'text-gray-400' : 'text-gray-600'} mt-2 mb-4 text-xs md:text-[14px]`}>{description}</p>
 
             <div className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} flex justify-between font-medium items-center text-[11px] md:text-[14px]`}>
                 <div className='flex gap-4 items-center'>

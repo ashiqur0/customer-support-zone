@@ -6,7 +6,7 @@ const TaskStatusCard = ({ issue, handleSetResolved }) => {
     const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     return (
-        <div className={`${isDarkMode? 'bg-slate-900': 'bg-slate-100'} p-4 rounded-md mt-4`}>
+        <div className={`${isDarkMode? 'bg-slate-950 shadow-white': 'bg-slate-100 shadow-slate-800'} p-4 hover:shadow-md rounded-md mt-4`}>
             <h1 className='font-medium mb-4'>{issue.title}</h1>
             <button 
                 onClick={() => {

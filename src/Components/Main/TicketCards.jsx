@@ -9,7 +9,7 @@ const TicketCards = ({ customerPromise, handleSetIssues, resolved, isDarkMode })
     customers = customers.filter(issue => !issuesToRemove.has(issue.id));
 
     return (
-        <div className={`${isDarkMode? 'bg-slate-800':'bg-slate-300'} md:w-3/4 w-full p-4 rounded-md`}>
+        <div className={`${isDarkMode? 'bg-slate-900':'bg-slate-300'} md:w-3/4 w-full p-4 rounded-md`}>
             <h1 className={`md:text-3xl text-xl font-bold mb-4 ${isDarkMode? 'text-white' : ' text-slate-800'}`}>Customer Tickets</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
 
