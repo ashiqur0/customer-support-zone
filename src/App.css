@@ -16,3 +16,7 @@ ul li button:hover {
   background-color: rgba(128, 128, 128, 0.2);
   border-radius: 8px;
 }
+
+.footer-p div p {
+  font-size: 14px;
+}

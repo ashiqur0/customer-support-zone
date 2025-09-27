@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still receive an 'Invalid Credentials' error.",
+    "customerName": "John Smith",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-15"
+  },
+  {
+    "id": 1002,
+    "title": "Unable to Download Invoice",
+    "description": "Customer cannot download their January invoice from the billing section. The download button appears greyed out, and they need it for tax purposes.",
+    "customerName": "Sarah Johnson",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "2024-01-16"
+  },
+  {
+    "id": 1003,
+    "title": "Application Crashing on Startup",
+    "description": "The desktop application immediately crashes after attempting to launch. This started after the latest software update was installed.",
+    "customerName": "Michael Chen",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-17"
+  },
+  {
+    "id": 1004,
+    "title": "Duplicate Charge on Credit Card",
+    "description": "Customer was incorrectly charged twice for their monthly subscription fee on the 5th of this month. They require an immediate refund for the extra charge.",
+    "customerName": "Maria Rodriguez",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-18"
+  },
+  {
+    "id": 1005,
+    "title": "Feature Request: Dark Mode Option",
+    "description": "Requesting the implementation of a dark mode feature within the web platform for better eye comfort during long usage hours.",
+    "customerName": "David Lee",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-19"
+  },
+  {
+    "id": 1006,
+    "title": "Shipping Delay on Order #4592",
+    "description": "Order #4592, placed last week, has an outdated tracking number. Customer needs an update on the current location and estimated delivery date.",
+    "customerName": "Jessica Brown",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "2024-01-20"
+  },
+  {
+    "id": 1007,
+    "title": "Incorrect Product Received",
+    "description": "Customer ordered a Model A but received a Model B. The box clearly states the wrong model was shipped. Needs a replacement and return label.",
+    "customerName": "Alex Garcia",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-21"
+  },
+  {
+    "id": 1008,
+    "title": "Question about API Doc",
+    "description": "The customer is a developer seeking clarification on the rate limiting policy mentioned in the v2 API documentation. They need specific endpoint limits.",
+    "customerName": "Emily Clark",
+    "priority": "LOW PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "2024-01-22"
+  },
+  {
+    "id": 1009,
+    "title": "Account Suspension Inquiry",
+    "description": "Customer's account was suspended without warning. They are asking for the reason and steps required to restore their service immediately.",
+    "customerName": "Robert Davis",
+    "priority": "LOW PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "2024-01-23"
+  },
+  {
+    "id": 1010,
+    "title": "Email Notifications Not Working",
+    "description": "Customer is not receiving any email notifications (e.g., password reset, order confirmation) despite checking their spam folder. All settings are correct.",
+    "customerName": "Linda Wilson",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-24"
+  },
+  {
+    "id": 1011,
+    "title": "Trouble Uploading Large Files",
+    "description": "Uploading files over 500MB consistently fails with a 'Timeout' error message. The customer has a stable, fast internet connection.",
+    "customerName": "Tom Adams",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-25"
+  },
+  {
+    "id": 1012,
+    "title": "Request to Cancel Subscription",
+    "description": "Customer is trying to cancel their annual subscription but cannot find the option in the account settings page. Requests a manual cancellation.",
+    "customerName": "Nancy King",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-26"
+  },
+  {
+    "id": 1013,
+    "title": "Interface Text Overlap Bug",
+    "description": "On mobile devices, certain text elements in the main dashboard overlap, making them unreadable. Issue is reproducible on iOS and Android.",
+    "customerName": "Chris Baker",
+    "priority": "LOW PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "2024-01-27"
+  },
+  {
+    "id": 1014,
+    "title": "Refund Status Inquiry",
+    "description": "The customer was told a refund would be processed five business days ago but has not yet seen the credit posted to their bank account.",
+    "customerName": "Samantha Green",
+    "priority": "HIGH PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "2024-01-28"
+  },
+  {
+    "id": 1015,
+    "title": "Suggestion for New Integration",
+    "description": "Suggesting an integration with a popular third-party marketing tool (Tool X) to streamline their workflow. Includes details on required endpoints.",
+    "customerName": "Paul Thompson",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "2024-01-29"
+  }
+]

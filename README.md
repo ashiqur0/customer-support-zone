@@ -1,16 +1,3 @@
-
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-007
-
-### 📅 Deadline For 60 marks: 27th September, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks 
-
-### 📅 Deadline For 30 marks: Any time after 27th September , 2025 (11:59pm⏱️).
-
----
-
-# Private Repository: https://classroom.github.com/a/VVl8VKya
-
 # Customer Support Zone
 
 This project is a React-based **Customer Support Zone** designed to display customer tickets, track progress, and mark them as resolved. It follows a Figma design and includes additional features like status management, responsiveness, and toast notifications using **React-Toastify**.

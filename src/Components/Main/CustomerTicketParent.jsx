@@ -1,10 +1,10 @@
 import TaskStatus from './TaskStatus';
 import TicketCards from './TicketCards';
 
-const CustomerTicketParent = () => {
+const CustomerTicketParent = ({customerPromise}) => {
     return (
-        <div className='md:flex items-start gap-3 px-3'>
-            <TicketCards></TicketCards>
+        <div className='md:flex items-start gap-3 px-5'>
+            <TicketCards customerPromise={customerPromise}></TicketCards>
             <TaskStatus></TaskStatus>
         </div>
     );
