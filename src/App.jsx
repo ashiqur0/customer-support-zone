@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 
 const fetchCustomers = async () => {
-  const res = await fetch('../public/customer.json');
+  const res = await fetch('./customer.json');
   return res.json();
 }
 const customerPromise = fetchCustomers();
