@@ -23,7 +23,7 @@ const TicketCard = ({ customer, handleSetIssues }) => {
 
             <div className='flex justify-between font-medium text-gray-600 items-center text-[11px] md:text-[14px]'>
                 <div className='flex gap-4 items-center'>
-                    <p>{id}</p>
+                    <p>#{id}</p>
                     <p className={`
                         ${priority === 'HIGH PRIORITY' && 'text-red-500' ||
                         priority === 'MEDIUM PRIORITY' && 'text-amber-500' ||

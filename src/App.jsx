@@ -17,6 +17,7 @@ const customerPromise = fetchCustomers();
 function App() {
 
   const [issues, setIssues] = useState([]);
+  const [resolved, setResolved] = useState([]);
 
   function handleSetIssues(issue) {
     if (issues.find(issueF => issue.id === issueF.id)) {
@@ -24,14 +25,23 @@ function App() {
     }
     const newIssue = [...issues, issue];
     setIssues(newIssue);
-    // console.log(issues);
-    // toast("Wow so easy!")
+  }
+
+  function handleSetResolved(issue) {
+    const newResolved = [...resolved, issue];
+    setResolved(newResolved);
+
+    const oldIssue = issues.filter(issueF => issueF.id !== issue.id);
+    setIssues(oldIssue);
   }
 
   return (
     <div className='font-inter bg-gray-200'>
       <Navbar></Navbar>
-      <Banner issues={issues}> </Banner>
+      <Banner
+        issues={issues}
+        resolved={resolved}
+      > </Banner>
       <Suspense fallback={
         <div className='w-320 mx-auto flex justify-center items-center'>
           <span className="loading loading-spinner loading-xl"></span>
@@ -41,6 +51,8 @@ function App() {
           customerPromise={customerPromise}
           handleSetIssues={handleSetIssues}
           issues={issues}
+          handleSetResolved={handleSetResolved}
+          resolved={resolved}
         > </CustomerTicketParent>
       </Suspense>
 
