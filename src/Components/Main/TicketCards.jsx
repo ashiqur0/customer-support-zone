@@ -1,7 +1,7 @@
 import { use } from 'react';
 import TicketCard from './TicketCard';
 
-const TicketCards = ({ customerPromise }) => {
+const TicketCards = ({ customerPromise, handleSetIssues }) => {
     const customers = use(customerPromise);
 
     return (
@@ -13,6 +13,7 @@ const TicketCards = ({ customerPromise }) => {
                     customers.map(customer => <TicketCard
                         key={customer.id}
                         customer={customer}
+                        handleSetIssues={handleSetIssues}
                     ></TicketCard>)
                 }
 

@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 
-const TicketCard = ({ customer }) => {
+const TicketCard = ({ customer, handleSetIssues }) => {
     const { id, title, description, customerName, priority, status, createdAt } = customer;
 
     return (
-        <div className=' bg-white p-4 rounded-md'>
+        <div onClick={() => handleSetIssues(customer)}
+            className=' bg-white p-4 rounded-md cursor-pointer'>
             <div className='flex justify-between'>
                 <h2 className='font-semibold md:text-[1.125rem] text-[14px]'>{title}</h2>
                 <div className={`font-semibold md:py-1.5 md:px-4 px-2 py-1 rounded-xl md:rounded-3xl flex items-center gap-1.5 ${status === 'Open' ? 'bg-green-300' : 'bg-amber-200'}`}>
@@ -24,10 +25,9 @@ const TicketCard = ({ customer }) => {
                 <div className='flex gap-4 items-center'>
                     <p>{id}</p>
                     <p className={`
-                        ${
-                            priority === 'HIGH PRIORITY' && 'text-red-500' ||
-                            priority === 'MEDIUM PRIORITY' && 'text-amber-500' ||
-                            priority === 'LOW PRIORITY' && 'text-green-500'
+                        ${priority === 'HIGH PRIORITY' && 'text-red-500' ||
+                        priority === 'MEDIUM PRIORITY' && 'text-amber-500' ||
+                        priority === 'LOW PRIORITY' && 'text-green-500'
                         }
                     `}>{priority}</p>
                 </div>
