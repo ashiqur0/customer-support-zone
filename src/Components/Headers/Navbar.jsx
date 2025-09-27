@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode }) => {
     return (
-        <div className='bg-white py-3 px-3'>
+        <div className={`${isDarkMode? 'bg-slate-900 text-white' : 'bg-white'} shadow-xl py-3 px-3`}>
             <div className='flex justify-start  max-w-320 mx-auto '>
                 <details className="dropdown w-100vw block  md:hidden">
                     <summary className="btn m-1"><FontAwesomeIcon icon={faBars} /></summary>
@@ -15,7 +15,7 @@ const Navbar = () => {
                         <li>Download</li>
                         <li>Contact</li>
                         <li>
-                            <button className='flex items-center gap-2 bg-gradient-to-br from-indigo-800 via-violet-700 to-fuchsia-600 px-4 py-2 rounded-md text-white'>
+                            <button className='flex items-center gap-3 bg-gradient-to-br from-indigo-800 via-violet-700 to-fuchsia-600 px-4 py-2 rounded-md font-bold'>
                                 <span>+</span>
                                 <span>New Ticket</span>
                             </button>
@@ -23,7 +23,7 @@ const Navbar = () => {
                     </ul>
                 </details>
 
-                <div className='w-full flex justify-between items-center text-black'>
+                <div className='w-full flex justify-between items-center cursor-pointer'>
                     <h1 className='font-bold md:text-2xl'>CS — Ticket System</h1>
                     <div>
                         <ul className='md:flex justify-around items-center hidden'>
@@ -34,7 +34,7 @@ const Navbar = () => {
                             <li><button>Download</button></li>
                             <li><button>Contact</button></li>
                             <li>
-                                <button className='flex items-center gap-2 bg-gradient-to-br from-indigo-800 via-violet-700 to-fuchsia-600 px-4 py-2 rounded-md text-white'>
+                                <button className='flex items-center gap-3 bg-gradient-to-br from-indigo-800 via-violet-700 to-fuchsia-600 px-4 py-2 rounded-md text-white font-bold ml-2'>
                                     <span>+</span>
                                     <span>New Ticket</span>
                                 </button>

@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 
-const TicketCard = ({ customer, handleSetIssues }) => {
+const TicketCard = ({ customer, handleSetIssues, isDarkMode }) => {
     const { id, title, description, customerName, priority, status, createdAt } = customer;
 
     return (
         <div onClick={() => handleSetIssues(customer)}
-            className=' bg-white p-4 rounded-md cursor-pointer'>
+            className={`${isDarkMode ? 'bg-slate-900' : 'bg-slate-100'} p-4 rounded-md cursor-pointer`}>
             <div className='flex justify-between'>
                 <h2 className='font-semibold md:text-[1.125rem] text-[14px]'>{title}</h2>
                 <div className={`font-semibold md:py-1.5 md:px-4 px-2 py-1 rounded-xl md:rounded-3xl flex items-center gap-1.5 ${status === 'Open' ? 'bg-green-300' : 'bg-amber-200'}`}>
@@ -19,9 +19,9 @@ const TicketCard = ({ customer, handleSetIssues }) => {
                         `}>{status}</p>
                 </div>
             </div>
-            <p className='mt-2 mb-4 text-gray-500 text-xs md:text-[14px]'>{description}</p>
+            <p className='mt-2 mb-4 text-gray-400 text-xs md:text-[14px]'>{description}</p>
 
-            <div className='flex justify-between font-medium text-gray-600 items-center text-[11px] md:text-[14px]'>
+            <div className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} flex justify-between font-medium items-center text-[11px] md:text-[14px]`}>
                 <div className='flex gap-4 items-center'>
                     <p>#{id}</p>
                     <p className={`
@@ -33,8 +33,10 @@ const TicketCard = ({ customer, handleSetIssues }) => {
                 </div>
                 <div className='flex gap-4 items-center'>
                     <p>{customerName}</p>
-                    <FontAwesomeIcon icon={faCalendar} />
-                    <p>{createdAt}</p>
+                    <div className='flex items-center gap-1'>
+                        <FontAwesomeIcon icon={faCalendar} />
+                        <p>{createdAt}</p>
+                    </div>
                 </div>
             </div>
         </div>

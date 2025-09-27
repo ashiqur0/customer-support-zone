@@ -25,6 +25,7 @@ function App() {
     }
     const newIssue = [...issues, issue];
     setIssues(newIssue);
+    toast("✅ In Progress!")
   }
 
   function handleSetResolved(issue) {
@@ -35,9 +36,13 @@ function App() {
     setIssues(oldIssue);
   }
 
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
   return (
-    <div className='font-inter bg-gray-200'>
-      <Navbar></Navbar>
+    <div className={`font-inter ${isDarkMode ? 'bg-slate-900' : 'bg-gray-200'}`}>
+      <Navbar
+        isDarkMode={isDarkMode}
+      ></Navbar>
       <Banner
         issues={issues}
         resolved={resolved}
@@ -53,6 +58,7 @@ function App() {
           issues={issues}
           handleSetResolved={handleSetResolved}
           resolved={resolved}
+          isDarkMode={isDarkMode}
         > </CustomerTicketParent>
       </Suspense>
 

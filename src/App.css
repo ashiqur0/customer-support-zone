@@ -15,8 +15,16 @@ ul li button {
 ul li button:hover {
   background-color: rgba(128, 128, 128, 0.2);
   border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .footer-p div p {
   font-size: 14px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

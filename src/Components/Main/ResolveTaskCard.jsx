@@ -1,9 +1,16 @@
 import React from 'react';
 
 const ResolveTaskCard = ({ resolve }) => {
+    
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
     return (
-        <div className='bg-blue-200 px-4 py-5 rounded-md mb-4'>
-            <h3 className='font-medium text-[1.125rem]'>{resolve.title}</h3>
+        <div className={`${isDarkMode? 'bg-slate-900' : 'bg-slate-100'} px-4 py-4 rounded-md mb-4 cursor-pointer`}>
+            <h3 className='font-medium'>{resolve.title}</h3>
+            <div className='flex justify-between items-center mt-2'>
+                <p className='text-green-500'>✅ Completed</p>
+                <button className='text-gray-400'>Click to remove</button>
+            </div>
         </div>
     );
 };
