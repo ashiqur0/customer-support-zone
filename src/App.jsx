@@ -42,6 +42,7 @@ function App() {
 
   return (
     <div className={`font-inter ${isDarkMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
+      <ToastContainer />
 
       <Navbar isDarkMode={isDarkMode}></Navbar>
       <Banner props={props}> </Banner>
@@ -54,7 +55,6 @@ function App() {
       </Suspense>
 
       <Footer></Footer>
-      <ToastContainer />
     </div>
   )
 }

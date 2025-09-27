@@ -15,6 +15,7 @@ const TaskStatus = ({ props }) => {
                             key={issue.id}
                             issue={issue}
                             handleSetResolved={handleSetResolved}
+                            isDarkMode={isDarkMode}
                         ></TaskStatusCard>)
                 }
             </div>
