@@ -11,7 +11,6 @@ const fetchCustomers = async () => {
   const res = await fetch('../public/customer.json');
   return res.json();
 }
-
 const customerPromise = fetchCustomers();
 
 function App() {
@@ -23,9 +22,10 @@ function App() {
     if (issues.find(issueF => issue.id === issueF.id)) {
       return toast("Issue is already added");
     }
+
     const newIssue = [...issues, issue];
     setIssues(newIssue);
-    toast("✅ In Progress!")
+    toast("🔄️ In Progress!");
   }
 
   function handleSetResolved(issue) {
@@ -34,32 +34,23 @@ function App() {
 
     const oldIssue = issues.filter(issueF => issueF.id !== issue.id);
     setIssues(oldIssue);
+    toast("✅ Completed!");
   }
 
   const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const props = { customerPromise, handleSetIssues, issues, handleSetResolved, resolved, isDarkMode };
 
   return (
-    <div className={`font-inter ${isDarkMode ? 'bg-slate-900' : 'bg-gray-200'}`}>
-      <Navbar
-        isDarkMode={isDarkMode}
-      ></Navbar>
-      <Banner
-        issues={issues}
-        resolved={resolved}
-      > </Banner>
+    <div className={`font-inter ${isDarkMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
+
+      <Navbar isDarkMode={isDarkMode}></Navbar>
+      <Banner props={props}> </Banner>
+
       <Suspense fallback={
         <div className='w-320 mx-auto flex justify-center items-center'>
           <span className="loading loading-spinner loading-xl"></span>
-        </div>
-      }>
-        <CustomerTicketParent
-          customerPromise={customerPromise}
-          handleSetIssues={handleSetIssues}
-          issues={issues}
-          handleSetResolved={handleSetResolved}
-          resolved={resolved}
-          isDarkMode={isDarkMode}
-        > </CustomerTicketParent>
+        </div>}>
+        <CustomerTicketParent props={props} > </CustomerTicketParent>
       </Suspense>
 
       <Footer></Footer>
