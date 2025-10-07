@@ -24,7 +24,7 @@ const Navbar = ({ isDarkMode }) => {
                 </details>
 
                 <div className='w-full flex justify-between items-center cursor-pointer'>
-                    <h1 className='font-bold md:text-2xl hover:text-3xl'>CS — Ticket System</h1>
+                    <h1 className='font-bold md:text-2xl'>CS — Ticket System</h1>
                     <div>
                         <ul className='md:flex justify-around items-center hidden'>
                             <li><button>Home</button></li>
