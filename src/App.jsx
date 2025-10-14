@@ -5,7 +5,7 @@ import Banner from './Components/Headers/Banner'
 import Navbar from './Components/Headers/Navbar'
 import CustomerTicketParent from './Components/Main/CustomerTicketParent'
 import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 const fetchCustomers = async () => {
   const res = await fetch('./customer.json');
@@ -20,12 +20,32 @@ function App() {
 
   function handleSetIssues(issue) {
     if (issues.find(issueF => issue.id === issueF.id)) {
-      return toast("Issue is already added");
+      return toast.warn('Issue is already added', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
     }
 
     const newIssue = [...issues, issue];
     setIssues(newIssue);
-    toast("🔄️ In Progress!");
+    toast.info('Added In Progress!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   }
 
   function handleSetResolved(issue) {
@@ -34,7 +54,7 @@ function App() {
 
     const oldIssue = issues.filter(issueF => issueF.id !== issue.id);
     setIssues(oldIssue);
-    toast("✅ Completed!");
+    toast.success('Issue Solved');
   }
 
   const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -42,7 +62,6 @@ function App() {
 
   return (
     <div className={`font-inter ${isDarkMode ? 'bg-slate-900' : 'bg-slate-200'}`}>
-      <ToastContainer />
 
       <Navbar isDarkMode={isDarkMode}></Navbar>
       <Banner props={props}> </Banner>
@@ -55,6 +74,20 @@ function App() {
       </Suspense>
 
       <Footer></Footer>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
     </div>
   )
 }
